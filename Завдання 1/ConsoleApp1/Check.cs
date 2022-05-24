@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     internal static class Check
-    {
+    {,,,фівпаліфпв
         public static void seeProductInfo(Product pr)
         {
             Console.WriteLine($"Назва: {pr.Name}. Цiна: {pr.Price}. Вага: {pr.Weight}.");
