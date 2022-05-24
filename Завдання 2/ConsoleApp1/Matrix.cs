@@ -52,11 +52,30 @@ namespace ConsoleApp1
             Console.WriteLine("Введiть розмiрнiсть квадратоної матрицi");
             int n = Convert.ToInt32(Console.ReadLine());
             int[,] matr = new int[n, n];
-            for(int i = 0,elem=0; i < n; i++)
+            int number=0;
+            for(int line =0; line < n; line++)
             {
-                for(int j=0; j < n; j++)
+                if(line % 2 == 0)
                 {
-                    matr[i, j] = ++elem;
+                    int i1 = line;
+                    int j1 = 0;
+                    for (int i = 0; i < line + 1; i++)
+                    {
+                        matr[i1, j1] =++number;
+                        i1--;
+                        j1++;
+                    }
+                }
+                else
+                {
+                    int i1 = 0;
+                    int j1 = line;
+                    for (int i = 0; i < line + 1; i++)
+                    {
+                        matr[i1, j1] = ++number;
+                        i1++;
+                        j1--;
+                    }
                 }
             }
             for(int i = 0; i < n; i++)
