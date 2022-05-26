@@ -7,29 +7,30 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Vector arr1 = new Vector(10);
-            Console.WriteLine(arr1);
-            arr1.BubbleSort();
-            Console.WriteLine(arr1);
             arr1.InitShuffle();
             Console.WriteLine(arr1);
-            arr1[0] = 1;
-            arr1[1] = 1;
-            arr1[2] = 3;
-            arr1[3] = 3;
-            arr1[4] = 4;
-            arr1[5] = 4;
+            arr1.QuickSortCentral(0,9);
             Console.WriteLine(arr1);
-            Console.WriteLine("Палiндром: "+arr1.IsPalindrome());
-            arr1.ReverseArray();
-            Console.WriteLine(arr1);
-            Array.Reverse(arr1.Array);
-            Console.WriteLine(arr1);
-            arr1.InitRand(5, 11);
-            int[] sub = arr1.LongestSequence();
-            for (int i = 0; i < sub.Length; i++)
-            {
-                Console.Write(sub[i] + " ");
-            }
+            //arr1.BubbleSort();
+            //Console.WriteLine(arr1);
+            //arr1[0] = 1;
+            //arr1[1] = 1;
+            //arr1[2] = 3;
+            //arr1[3] = 3;
+            //arr1[4] = 4;
+            //arr1[5] = 4;
+            //Console.WriteLine(arr1);
+            //Console.WriteLine("Палiндром: "+arr1.IsPalindrome());
+            //arr1.ReverseArray();
+            //Console.WriteLine(arr1);
+            //Array.Reverse(arr1.Array);
+            //Console.WriteLine(arr1);
+            //arr1.InitRand(5, 11);
+            //int[] sub = arr1.LongestSequence();
+            //for (int i = 0; i < sub.Length; i++)
+            //{
+            //    Console.Write(sub[i] + " ");
+            //}
 
             //arr1.InitRand(1, 5);
             //Pair[] pairs = arr1.CalculateFreq();

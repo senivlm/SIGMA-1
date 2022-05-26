@@ -225,6 +225,39 @@ namespace ConsoleApp1
                 }
             }
         }
+        public void QuickSortCentral(int first,int last)
+        {
+            int middle = array[(first+last)/2];
+            int i = first;
+            int j = last;
+            do
+            {
+                while (array[j] > middle)
+                {
+                    j--;
+                }
+                while (array[i] < middle)
+                {
+                    i++;
+                }
+                if (i <= j)
+                {
+                    int buffer = Array[i];
+                    Array[i] = Array[j];
+                    Array[j] = buffer;
+                    i++;
+                    j--;
+                }
+            } while (i <= j);
+            if (j > first)
+            {
+                QuickSortCentral(first, j);
+            }
+            if (i < last)
+            {
+                QuickSortCentral(i,last);
+            }
+        }
         public override string ToString()
         {
             string line = "";
