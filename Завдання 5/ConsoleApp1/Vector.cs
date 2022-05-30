@@ -326,6 +326,43 @@ namespace ConsoleApp1
             StreamReader reader = new StreamReader(filename);
             string line = reader.ReadLine();
         }
+        private void Heapify(int currentElementIndex, int lastIndex)
+        {
+            int leftChildIndex = 2*currentElementIndex+1;
+            int rightChildIndex = 2*currentElementIndex+2;
+            if (leftChildIndex > lastIndex)
+            {
+                return;
+            }
+            int maxChildIndex = leftChildIndex;
+            if (rightChildIndex<=lastIndex&&array[rightChildIndex]>array[leftChildIndex])
+            {
+                maxChildIndex = rightChildIndex;
+            }
+            if (array[currentElementIndex] < array[maxChildIndex])
+            {
+                int buffer = array[currentElementIndex];
+                array[currentElementIndex] = array[maxChildIndex];
+                array[maxChildIndex] = buffer;
+                Heapify(maxChildIndex,lastIndex);
+            }
+        }
+        public void HeapSort()
+        {
+            int lastIndex = array.Length-1;
+            for(int i = array.Length-1; i >= 0; i--)
+            {
+                Heapify(i,array.Length-1);
+            }
+            while (lastIndex > 0)
+            {
+                int temp = array[0];
+                array[0] = array[lastIndex];
+                array[lastIndex] = temp;
+                lastIndex--;
+                Heapify(0, lastIndex);
+            }   
+        }
         public override string ToString()
         {
             string line = "";

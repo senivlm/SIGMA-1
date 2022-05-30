@@ -9,7 +9,8 @@ namespace ConsoleApp1
             Vector arr1 = new Vector(10);
             arr1.InitRand(1,15);
             Console.WriteLine(arr1);
-            
+            arr1.HeapSort();
+            Console.WriteLine(arr1);
             //arr1.BubbleSort();
             //
             //arr1[0] = 1;
