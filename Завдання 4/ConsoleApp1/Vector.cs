@@ -10,7 +10,7 @@ namespace ConsoleApp1
     internal class Vector
     {
         int[] array;
-
+// властивість тут лишня. Колекції строго інкапсулюють
         public int[] Array { get => array; set => array = value; }
 
         public int this[int index]
@@ -22,7 +22,7 @@ namespace ConsoleApp1
                     return Array[index];
                 }
                 else
-                {
+                {//У основній програмі винятки треба перехопювати
                     throw new IndexOutOfRangeException("Index out of range array.");
                 }
             }
@@ -116,12 +116,13 @@ namespace ConsoleApp1
             return result;
         }
         public bool IsPalindrome()
-        {
+        {//  можна обійтись і однією змінною
             for(int i = 0, j=Array.Length-1; i < Array.Length / 2; i++,j--)
             {
                 if (Array[i] != Array[j])
                 {
                     return false;
+                    // перервати цикл
                 }
             }
             return true;
@@ -259,6 +260,7 @@ namespace ConsoleApp1
                 QuickSortCentral(i,last);
             }
         }
+        // відсутні методи
         public void QuickSortFirst(int first)
         {
            
