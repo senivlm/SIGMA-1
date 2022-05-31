@@ -2,6 +2,8 @@
 
 namespace ConsoleApp1
 {
+    // де перевірка виконань завдань?
+    
     internal class Program
     {
         static void Main(string[] args)
