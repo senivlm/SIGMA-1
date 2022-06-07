@@ -225,7 +225,7 @@ namespace ConsoleApp1
                     k++;
                 }
             }
-        }
+        }// Замість 3 методів треба 1 метод, в якому передається параметром індекс початкового опорного елемента.
         public void QuickSortCentral(int first,int last)
         {
             int middle = array[(first+last)/2];
@@ -259,6 +259,7 @@ namespace ConsoleApp1
                 QuickSortCentral(i,last);
             }
         }
+        // чому немає реалізації?
         public void QuickSortFirst(int first)
         {
            
@@ -305,7 +306,7 @@ namespace ConsoleApp1
                 }
             }
             for(int n = 0; n < temp.Length; n++)
-            {
+            {// тут точно буде вихід за межі масиву
                 array[n+l] = temp[n];
             }
         }
@@ -314,6 +315,7 @@ namespace ConsoleApp1
             if (end - start <= 1) return;
             int middle = (end + start) / 2;
             SplitMergeSort(start, middle);
+            //  Має бути SplitMergeSort(middle+1, end);
             SplitMergeSort(middle, end);
             Merge(start, middle, end);
         }
