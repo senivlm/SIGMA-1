@@ -5,7 +5,7 @@ namespace ConsoleApp1
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { // Не побачила splitMerge виклику, а також реалізації для файла.
             Vector arr1 = new Vector(10);
             arr1.InitRand(1,15);
             Console.WriteLine(arr1);
