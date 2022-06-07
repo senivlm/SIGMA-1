@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
-{
+{// Ваш номер 26.
     internal class Vector
     {
         int[] array;
@@ -347,6 +347,7 @@ namespace ConsoleApp1
                 Heapify(maxChildIndex,lastIndex);
             }
         }
+        //бажано спробувати самій писати такий код!!!
         public void HeapSort()
         {
             int lastIndex = array.Length-1;
